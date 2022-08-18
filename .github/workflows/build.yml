@@ -25,10 +25,10 @@ jobs:
 
       # same, will fail because of missing parameters
       - name: Import Secrets
-        uses: hashicorp/vault-action@v2.1.2
+        uses: hashicorp/vault-action@v2.4.2
         continue-on-error: true
 
       # same, will fail because of missing parameters
       - name: Import Secrets
-        uses: hashicorp/vault-action@5e5c06a3c8e96b7c4757fe7a10e03469cdbd07bb # tag=v2.1.2
+        uses: hashicorp/vault-action@7d98524254c38dc6892804f991526ff30905f643 # tag=v2.4.2
         continue-on-error: true
