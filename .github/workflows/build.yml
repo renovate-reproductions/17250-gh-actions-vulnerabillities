@@ -22,10 +22,13 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
 
       # same, will fail because of missing parameters
       - name: Import Secrets
         uses: hashicorp/vault-action@v2.1.2
+        continue-on-error: true
+
+      # same, will fail because of missing parameters
+      - name: Import Secrets
+        uses: hashicorp/vault-action@5e5c06a3c8e96b7c4757fe7a10e03469cdbd07bb # tag=v2.1.2
         continue-on-error: true
